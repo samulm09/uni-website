@@ -7,6 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: The application is designed as an interactive dashboard, moving away from the linear format of the source reports. The core is a filterable grid of university "cards," allowing users to immediately narrow down options based on personal criteria like location, field of study, and budget. This user-driven, non-linear approach is superior for decision-making, as it empowers users to compare relevant options side-by-side. Clicking a card opens a detailed modal view, keeping the user in a single context without page loads. A new floating chatbot provides general academic guidance, while a button within the university modal generates dynamic program descriptions using an an LLM. This structure transforms static data into a dynamic, personalized exploration tool. -->
+    <!-- Visualization & Content Choices: Report Info -> Goal -> Viz/Presentation Method -> Interaction -> Justification -> Library/Method. 1. IB Scores -> Compare competitiveness -> Grouped Bar Chart -> Hover for details -> Clearly visualizes the critical gap between minimum and actual accepted scores -> Chart.js/Canvas. 2. Costs -> Compare affordability -> Stacked Bar Chart -> Filter by region -> Breaks down total cost into tuition vs. living, highlighting regional differences -> Chart.js/Canvas. 3. University Overview -> Quick comparison -> HTML/CSS Cards -> Click to expand -> Provides a scannable summary of key data points for quick evaluation -> Tailwind CSS. 4. Academic Guidance -> Personalized advice -> Chatbot interface -> LLM-powered conversation -> Provides dynamic, contextual answers beyond static data -> Gemini API. 5. Program Descriptions -> Deep dive into specific programs -> LLM-generated text -> Click to generate -> Offers rich, customized content for a chosen university and field -> Gemini API. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -151,7 +155,7 @@
     </div>
 
     <script>
-        const API_KEY = AIzaSyCKwlek2rAIWvXCtFMJwaTUFp8Hnw1Gizs;
+        const API_KEY = "AIzaSyAt2MAfzCZoLlmlFsiYuL1Nwwc2qorETxg"; // Replace with your own key from aistudio.google.com
         const universityData = [
             { id: 1, name: "MIT", region: "USA", country: "USA", fields: ["CS", "DS_AI", "BME"], ib_min: 39, ib_avg: 43, cost_tuition: 71291, cost_living: 30000, details: "A global leader in CS and AI research. Admission is holistic, but academic standards are exceptionally high. Offers world-class research opportunities at CSAIL. Famously need-blind with full-need financial aid for all undergraduates, making it potentially tuition-free for many.", recommended_courses: "HL: Math AA, Physics, Computer Science. SL: English B, Biology." },
             { id: 2, name: "Stanford University", region: "USA", country: "USA", fields: ["CS", "DS_AI", "BME"], ib_min: 39, ib_avg: 43, cost_tuition: 65000, cost_living: 41000, details: "Located in Silicon Valley, offering strong theoretical foundations and practical applications. The new B.S. in Data Science is explicitly interdisciplinary, blending tech with social sciences and ethics.", recommended_courses: "HL: Math AA, Physics, Computer Science. SL: English B, History." },
@@ -583,3 +587,4 @@
 
 </body>
 </html>
+
